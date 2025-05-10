@@ -2,18 +2,40 @@ import { Link, NavLink } from "react-router-dom";
 import { FaShoppingBag } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GiCancel } from "react-icons/gi";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const [isNavBtnPressed, setIsNavBtnPressed] = useState(false);
+
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsNavBtnPressed(!isNavBtnPressed);
   };
 
+  //Scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    }
+    
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.addEventListener("scroll", handleScroll);
+    }
+  }, []);
+
   return (
-    <header className="py-4  fixed w-full text-white top-0 transition duration-300 ease-in-out">
-      <nav className="container mx-auto max-w-screen-2xl flex items-center justify-between py-4 px-4">
+    <header
+      className={` fixed  top-0 left-0 right-0 transition duration-300 ease-in-out z-50 ${
+        isScrolled ? "bg-white shadow-md" : "bg-transparent text-white"
+      }`}
+    >
+      <nav className="container mx-auto max-w-screen-2xl flex items-center justify-between py-6 px-8">
         {/* Logo */}
 
         <div>

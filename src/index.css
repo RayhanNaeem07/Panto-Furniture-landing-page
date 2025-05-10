@@ -7,3 +7,7 @@
   --color-bermuda: #78dcca;
   --color-primary: #E58411
 }
+
+.section-container{
+  @apply container mx-auto max-w-screen-2xl py-6 px-8;
+}
