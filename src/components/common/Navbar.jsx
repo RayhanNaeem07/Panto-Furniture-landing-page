@@ -35,7 +35,7 @@ const Navbar = () => {
         isScrolled ? "bg-white shadow-md" : "bg-transparent text-white"
       }`}
     >
-      <nav className="container mx-auto max-w-screen-2xl flex items-center justify-between py-6 px-8">
+      <nav className="section-container  flex items-center justify-between ">
         {/* Logo */}
 
         <div>
