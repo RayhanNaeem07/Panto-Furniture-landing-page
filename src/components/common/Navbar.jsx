@@ -25,7 +25,7 @@ const Navbar = () => {
     
     window.addEventListener("scroll", handleScroll);
     return () => {
-      window.addEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     }
   }, []);
 
@@ -100,7 +100,7 @@ const Navbar = () => {
         {/* Mobile menu */}
 
         <div
-          className={`md:hidden w-full absolute top-full left-0 bg-black  ${
+          className={`md:hidden w-full absolute top-full left-0 bg-gray-400  ${
             isNavBtnPressed ? "block" : "hidden"
           }`}
         >
