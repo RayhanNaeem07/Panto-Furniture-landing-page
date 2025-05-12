@@ -1,18 +1,16 @@
-
 @import "tailwindcss";
 @theme {
-
   --color-midnight: #121063;
   --color-tahiti: #3ab7bf;
   --color-bermuda: #78dcca;
-  --color-primary: #E58411
+  --color-primary: #e58411;
 }
 
-.section-container{
+.section-container {
   @apply container mx-auto max-w-screen-2xl py-6 px-16;
 }
 
 .swiper-button-prev:after,
 .swiper-button-next:after {
-  @apply px-4 py-2 ring-1 ring-primary hover:text-white hover:bg-primary rounded-full bg-white text-black text-lg ;
+  @apply px-4 py-2 ring-1  ring-primary hover:text-white hover:bg-primary rounded-full bg-white text-black  ;
 }

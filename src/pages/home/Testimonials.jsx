@@ -50,7 +50,7 @@ const Testimonials = () => {
                     reviews.map((review) => (
                         <SwiperSlide className=' bg-no-repeat bg-cover rounded-lg' style={{ backgroundImage: `url(${review.coverImg})` }}>
                             <div className="md:h-[547px] flex  justify-center items-center mb-4">
-                                <div className='mt-16 mb-5 bg-white border rounded-xl md:w-4/5 w-full p-4 relative'>
+                                <div className='mt-16 mb-5 bg-white  rounded-xl md:w-4/5 w-full p-4 relative'>
                                     <img
                                         src={review.image}
                                         alt={review.name}
