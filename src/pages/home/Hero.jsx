@@ -3,8 +3,7 @@ import { IoSearch } from "react-icons/io5";
 const Hero = () => {
   return (
     <div
-      className="bg-center bg-cover h-[100vh] "
-      style={{ backgroundImage: "url('src/assets/banner.png')" }}
+      className="h-screen bg-center bg-cover bg-[url('public/banner.png')]"
     >
       <div className="pt-24 md:pt-30 text-center ">
         <h1 className="text-4xl md:text-6xl font-medium text-white md:w-1/2 mx-auto leading-snug  lg:leading-tight">
